@@ -1,30 +1,20 @@
-<div align="center">
+# Сапёр — учебная ознакомительная практика 2026
 
-# Сапёр — учебная ознакомическая практика 2026
+**Студент:** Иванов Иван Иванович  
+**Группа:** БИ-01-01  
+**Вариант:** Б-26 — Сапёр (волновой алгоритм BFS + дедукция)  
+**Язык:** Python 3.12
 
-</div>
+---
 
-<table>
-<tr>
-<td><strong>Студент:</strong></td>
-<td>Иванов Иван Иванович</td>
-</tr>
-<tr>
-<td><strong>Группа:</strong></td>
-<td>БИ-01-01</td>
-</tr>
-<tr>
-<td><strong>Вариант:</strong></td>
-<td>Б-26 — Сапёр (волновой алгоритм BFS + дедукция)</td>
-</tr>
-<tr>
-<td><strong>Язык:</strong></td>
-<td>Python 3.12</td>
-</tr>
-</table>
-##  Описание
+## Описание
+
 Классическая игра «Сапёр» с реализацией волнового алгоритма (BFS) для открытия пустых ячеек и алгоритма дедукции для генерации подсказок. Поддерживаются четыре уровня сложности с предустановленными размерами полей: 8×8 (9 мин), 9×9 (10 мин), 16×16 (40 мин) и 30×16 (99 мин). Реализован графический интерфейс на Tkinter, таймер и таблица рекордов с сохранением в JSON-файл.
-##  Структура репозитория
+
+---
+
+## Структура репозитория
+.
 ├── src/
 │ ├── main.py # точка входа, CLI
 │ ├── game.py # основная логика игры
@@ -38,13 +28,46 @@
 ├── tests/
 │ ├── test_algorithm.py # юнит-тесты алгоритмов
 │ ├── test_board.py # юнит-тесты игрового поля
+│ ├── test_cell.py # юнит-тесты ячейки
+│ ├── test_game.py # юнит-тесты игровой логики
+│ ├── test_records.py # юнит-тесты рекордов
 │ └── test_integration.py # интеграционные тесты
 ├── data/
 │ ├── sample_input.json # пример входных данных
 │ ├── expected_output.json # ожидаемый результат для тестов
 │ └── records.json # файл с рекордами
 ├── Dockerfile
+├── docker-compose.yml
 ├── .dockerignore
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
+---
+
+## Установка и запуск
+
+### Локально
+# 1. Клонировать репозиторий
+git clone https://github.com/username/minesweeper.git
+cd minesweeper
+
+# 2. Установить зависимости
+pip install -r requirements.txt
+
+# 3. Запустить игру
+python src/main.py
+
+# 4. Запустить с тестовыми данными
+python src/main.py --input data/sample_input.json
+## В Docker
+# Собрать образ
+docker build -t minesweeper .
+
+# Запустить игру
+docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix minesweeper
+
+# Запустить с внешним файлом данных
+docker run --rm -v "$(pwd)/data:/app/data" minesweeper --input /app/data/sample_input.json
+
+Параметры запуска
