@@ -102,8 +102,6 @@ docker run --rm --entrypoint python minesweeper -m pytest tests/ -v
 Зависимости
 Python ≥ 3.12
 
-Tkinter (встроен в Python)
+Tkinter
 
-pytest ≥ 7.0.0 (для тестирования)
-
-pytest-cov ≥ 4.0.0 (для покрытия кода)
+pytest ≥ 7.0.0
