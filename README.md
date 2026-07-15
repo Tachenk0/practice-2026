@@ -1,7 +1,7 @@
 # Сапёр — учебная ознакомительная практика 2026
 
-**Студент:** Иванов Иван Иванович  
-**Группа:** БИ-01-01  
+**Студент:** Гориченко Максим Сергеевич 
+**Группа:** БИН-24-1 
 **Вариант:** Б-26 — Сапёр (волновой алгоритм BFS + дедукция)  
 **Язык:** Python 3.12
 
@@ -51,17 +51,14 @@
 ### Локально
 ```
 # 1. Клонировать репозиторий
-gh repo clone Tachenk0/practice-2026
+git clone https://github.com/Tachenk0/minesweeper.git
 cd minesweeper
 
 # 2. Установить зависимости
 pip install -r requirements.txt
 
 # 3. Запустить игру
-python src/main.py
-
-# 4. Запустить с тестовыми данными
-python src/main.py --input data/sample_input.json
+python -m src.main
 ```
 ## В Docker
 ```
@@ -102,8 +99,6 @@ docker run --rm --entrypoint python minesweeper -m pytest tests/ -v
 Зависимости
 Python ≥ 3.12
 
-Tkinter (встроен в Python)
+Tkinter
 
-pytest ≥ 7.0.0 (для тестирования)
-
-pytest-cov ≥ 4.0.0 (для покрытия кода)
+pytest ≥ 7.0.0
