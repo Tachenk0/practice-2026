@@ -51,7 +51,7 @@
 ### Локально
 ```
 # 1. Клонировать репозиторий
-git clone https://github.com/username/minesweeper.git
+gh repo clone Tachenk0/practice-2026
 cd minesweeper
 
 # 2. Установить зависимости
@@ -75,4 +75,10 @@ docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix minesweeper
 docker run --rm -v "$(pwd)/data:/app/data" minesweeper --input /app/data/sample_input.json
 ```
 
+
 Параметры запуска
+| Параметр | Описание | По умолчанию |
+|----------|----------|--------------|
+| `--input` | Путь к файлу с входными данными | `data/sample_input.json` |
+| `--output` | Путь к файлу результата | `stdout` |
+| `--verbose` | Подробный вывод | `выключен` |
