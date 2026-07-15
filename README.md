@@ -51,7 +51,7 @@
 ### Локально
 ```
 # 1. Клонировать репозиторий
-gh repo clone Tachenk0/practice-2026
+git clone https://github.com/Tachenk0/minesweeper.git
 cd minesweeper
 
 # 2. Установить зависимости
