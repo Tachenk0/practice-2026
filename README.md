@@ -49,6 +49,7 @@
 ## Установка и запуск
 
 ### Локально
+```
 # 1. Клонировать репозиторий
 git clone https://github.com/username/minesweeper.git
 cd minesweeper
@@ -61,7 +62,9 @@ python src/main.py
 
 # 4. Запустить с тестовыми данными
 python src/main.py --input data/sample_input.json
+```
 ## В Docker
+```
 # Собрать образ
 docker build -t minesweeper .
 
@@ -70,5 +73,6 @@ docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix minesweeper
 
 # Запустить с внешним файлом данных
 docker run --rm -v "$(pwd)/data:/app/data" minesweeper --input /app/data/sample_input.json
+```
 
 Параметры запуска
