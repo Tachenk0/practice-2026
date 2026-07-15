@@ -98,7 +98,7 @@ class MinesweeperUI:
         # level indicator
         self.level_label = tk.Label(
             toolbar,
-            text=f"Level: {self.current_preset}",
+            text=f"difficult: {self.current_preset}",
             font=('Arial', 10, 'bold'),
             fg='blue'
         )
