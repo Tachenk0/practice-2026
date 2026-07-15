@@ -1,0 +1,13 @@
+services:
+  minesweeper:
+    build: .
+    container_name: minesweeper
+    environment:
+       - DISPLAY=${DISPLAY}
+       - QT_X11_NO_MITSHM=1
+    volumes:
+       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+       - ./data:/app/data
+    network_mode: host
+    stdin_open: true
+    tty: true

@@ -1,0 +1,18 @@
+[
+  {
+    "player": "Andrey",
+    "time": 39,
+    "rows": 8,
+    "cols": 8,
+    "mines": 9,
+    "date": "2026-07-15T09:21:21.803714"
+  },
+  {
+    "player": "Tachenko",
+    "time": 98,
+    "rows": 9,
+    "cols": 9,
+    "mines": 10,
+    "date": "2026-07-15T09:15:27.856715"
+  }
+]
