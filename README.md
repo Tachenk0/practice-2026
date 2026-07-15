@@ -59,9 +59,6 @@ pip install -r requirements.txt
 
 # 3. Запустить игру
 python -m src.main
-
-# 4. Запустить с тестовыми данными
-python src/main.py --input data/sample_input.json
 ```
 ## В Docker
 ```
