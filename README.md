@@ -65,6 +65,9 @@ python -m src.main
 # Собрать образ
 docker build -t minesweeper .
 
+#Дать доступ к X11
+xhost +local:docker
+
 # Запустить игру
 docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix minesweeper
 
